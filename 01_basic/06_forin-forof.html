@@ -7,13 +7,32 @@
   </head>
   <body>
     <script>
-      var parson = {
-        name: "amrit",
-        age: 23,
-        eye: "brown",
-      };
-      for (const par in parson) {
-        document.writeln(par);
+      //   var temp = "";
+      //   var parson = {
+      //     name: "amrit",
+      //     lastN: "pal",
+      //     age: 23,
+      //     eye: "brown",
+      //   };
+
+      //   for (const par in parson) {
+      //     temp = temp + parson[par] + " ";
+      //   }
+      //   document.writeln(temp);
+      document.writeln("<h2>for of loop</h2>");
+
+      var value = ["a", "b", "c", "d"];
+
+      for (const key of value) {
+        document.writeln(key);
+      }
+      document.writeln("<br>");
+      document.writeln("<h2>for of with string</h2>");
+
+      var name = "amrit";
+      for (const element of name) {
+        document.writeln(element);
+        document.writeln("<br>");
       }
     </script>
   </body>
