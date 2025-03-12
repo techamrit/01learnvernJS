@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function call</title>
+  </head>
+  <body>
+    <script>
+      function Emp(id, name) {
+        this.id = id;
+        this.name = name;
+      }
+
+      function Peremp(id, name) {
+        Emp.call(this, id, name);
+      }
+      function Tememp(id, name) {
+        Emp.call(this, id, name);
+      }
+      //   document.writeln(new Peremp(1, "amrit").id);
+      var E = new Peremp(1, "amrit");
+      var t = new Tememp(2, "manish");
+      document.writeln(E.name);
+      document.writeln(t.name);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function with object</title>
+  </head>
+  <body>
+    <script>
+      //   class car {
+
+      //    var model;
+      //    var color;
+
+      //   car(model ,color){
+      //     this.model = model;
+      //     this.color = color;
+      //   }
+      // }
+
+      // var xuv  =  new car("swift","red")
+      // document.writeln(xuv)
+
+      // var abc = new Function("num1", "num2", "return num1 + num2");
+      // document.writeln(abc(1, 2));
+      var abc = new Function("num1", "num2", "return Math.pow(num1,num2)");
+      document.writeln(abc(2, 3));
+      document.writeln(abc(4, 2));
+    </script>
+  </body>
+</html>
