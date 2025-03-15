@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object method 1</title>
+  </head>
+  <body>
+    <script>
+      //   var obj1 = {
+      //     a: 1,
+      //     b: 2,
+      //     c: 3,
+      //   };
+
+      //   var obj2 = {
+      //     d: 4,
+      //     e: 5,
+      //     f: 6,
+      //   };
+      //   var obj3 = Object.assign({ c: 4, f: 5 }, obj1);
+      //   console.log(obj1);
+      //   console.log(obj3);
+
+      //   function fruit() {
+      //     this.name = "mango";
+      //   }
+      //   function fun() {
+      //     fruit.call(this);
+      //   }
+      //   fun.prototype = Object.create(fruit.prototype);
+      //   console.log(new fun());
+
+      //   const app = new fun();
+      //   console.log(app);
+
+      //   var obj1 = {
+      //     a: 1,
+      //     b: 2,
+      //     c: 3,
+      //   };
+      //   var obj2 = Object.assign({ d: 4, f: 5 }, obj1);
+      //   console.log(obj1, obj2);
+
+      function fruit() {
+        this.name = "graps";
+      }
+      function fun() {
+        fruit.call(this);
+      }
+
+      console.log(new fun());
+    </script>
+  </body>
+</html>
