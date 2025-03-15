@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // literal object
+      var person = {
+        firstName: "amrit",
+        lastName: "pal",
+        age: 24,
+        eyeColor: "brown",
+      };
+      document.writeln(
+        "object details of person object : " +
+          person.firstName +
+          person.lastName
+      );
+
+      //   creating an object using new keyword (instance of an object;)
+      var emp = new Object();
+      emp.id = 1;
+      emp.name = "amrit";
+      emp.age = 24;
+
+      document.writeln(`<br>`);
+      document.writeln(`object details of person object :`);
+      for (const value in emp) {
+        document.writeln(` ${emp[value]}`);
+      }
+
+      // creating an object using object constructor
+
+      function employ(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+      }
+      var e = new employ(1, "amrit", 23);
+      for (const value in e) {
+        document.writeln(` <br>${e[value]}`);
+      }
+      document.writeln(` <br>${e.id}`);
+      document.writeln(` <br>${e.name}`);
+
+      document.writeln(" <br><h3> creating method in objesct:</h3>");
+    </script>
+  </body>
+</html>

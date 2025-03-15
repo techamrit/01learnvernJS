@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>object - method</title>
+  </head>
+  <body>
+    <script>
+      //   function employ(id, name, age) {
+      //     this.id = id;
+      //     this.name = name;
+      //     this.age = age;
+
+      //     this.newage = newage;
+      //     function newage(newages) {
+      //       this.age = newages;
+      //     }
+      //   }
+      //   var e = new employ(1, "amrit", 24);
+      //   document.writeln(`<br> ${e.name} ${e.age} `);
+      //   e.newage(25);
+      //   document.writeln(`<br> ${e.name} ${e.age} `);
+      //   e.newage(30);
+      //   document.writeln(`<br> ${e.name} ${e.age} `);
+
+      function employe(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+
+        this.newage = newage;
+        function newage(nage) {
+          this.age = nage;
+        }
+      }
+
+      var emp = new employe(1, "amrit", 24);
+
+      document.writeln(` name is ${emp.name} and age ${emp.age}`);
+      emp.newage(30);
+      document.writeln(`<br> name is ${emp.name} and age ${emp.age}`);
+    </script>
+  </body>
+</html>
