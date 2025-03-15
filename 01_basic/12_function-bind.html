@@ -41,26 +41,37 @@
 
       //   document.writeln(boundgetname());
 
+      //   var website = {
+      //     name: "amrit",
+      //     age: 23,
+      //     getitem: function () {
+      //       return this.age;
+      //       return this.name;
+      //     },
+      //   };
+      //   var website2 = {
+      //     name: "amrit",
+      //     age: 23,
+      //   };
+      //   var website3 = {
+      //     name: "amrit",
+      //     age: 24,
+      //   };
+
+      //   var unbountitem = website.getitem;
+      //   var bountitem = unbountitem.bind(website2.name);
+      //   document.writeln(bountitem());
+
       var website = {
         name: "amrit",
-        age: 23,
         getitem: function () {
-          return this.age;
           return this.name;
         },
       };
-      var website2 = {
-        name: "amrit",
-        age: 23,
-      };
-      var website3 = {
-        name: "amrit",
-        age: 24,
-      };
 
-      var unbountitem = website.getitem;
-      var bountitem = unbountitem.bind(website2.name);
-      document.writeln(bountitem());
+      var unboudn = website.getitem;
+      var bound = unboudn.bind(website);
+      document.writeln(bound());
     </script>
   </body>
 </html>

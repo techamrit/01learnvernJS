@@ -10,7 +10,7 @@
       var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
       var arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
       var max = Math.max.apply(this, arr);
-      var min = Math.min.apply(this, arr);
+      var min = Math.min.apply(null, arr); //null or this likhana jaruri hai
       document.writeln(max);
       document.writeln(min);
       arr.push.apply(arr, arr2);
