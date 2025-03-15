@@ -44,11 +44,13 @@
 
       function fruit() {
         this.name = "graps";
+        this.name = "mango";
       }
       function fun() {
         fruit.call(this);
       }
 
+      fun.prototype = Object.create(fruit.prototype);
       console.log(new fun());
     </script>
   </body>
