@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array example of literal and new key word and constructor</title>
+  </head>
+  <body>
+    <script>
+      document.writeln("<h2> this is array literal <br>");
+
+      const arr1 = ["apple", "orange", "graps"];
+      for (const element of arr1) {
+        document.writeln(element);
+      }
+      document.writeln("<h2> this is array new keyword <br>");
+
+      const arr2 = new Array();
+      arr2[1] = "amrit";
+      arr2[2] = "manish";
+      arr2[0] = "vivek";
+
+      for (const element of arr2) {
+        document.writeln(element);
+      }
+
+      document.writeln("<h2> this is array constructor <br>");
+      const arr3 = new Array("mango", "gavava", "papaya");
+      for (const element of arr3) {
+        document.writeln(element);
+      }
+    </script>
+  </body>
+</html>

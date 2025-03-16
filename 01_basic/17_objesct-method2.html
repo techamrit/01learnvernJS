@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> </title>
+  </head>
+  <body>
+    <script>
+      // this method prevent existing property
+      //   const obj1 = {
+      //     age: 23,
+      //   };
+
+      //   const obj2 = Object.freeze(obj1);
+      //   obj2.age = 32;
+      //   console.log(obj2.age);
+
+      //   const obj3 = {
+      //     age: 23,
+      //   };
+      //   const obj4 = {
+      //     age: 23,
+      //   };
+      //   document.writeln(Object.is(obj3.age, obj4.age));
+
+      document.writeln("<h3> example of isExtensible</h3>");
+
+      const obj5 = {
+        age: 23,
+        name: "amrit",
+      };
+      document.writeln(Object.is(obj5));
+      document.writeln(Object.isExtensible(obj5));
+      const Object2 = Object.seal(obj5);
+      //   const object2 = Object.freeze(obj5);
+      Object2.name = "manish";
+      delete Object2.name;
+      document.writeln(Object2.name);
+
+      document.writeln("<h3> example of values </h3>");
+      const obj6 = {
+        a: "abc",
+        b: 32,
+        c: true,
+      };
+
+      document.writeln(Object.values(obj6));
+      console.log(Object.values(obj6));
+    </script>
+  </body>
+</html>
