@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arraymethod2</title>
+  </head>
+  <body>
+    <script>
+      document.writeln("<h2>THIS IS FILL METHOD</h2><br>");
+      var arr1 = ["html", "css", "javascript"];
+      var result = arr1.fill("java");
+      document.writeln("array after performing fill():" + result);
+      var result2 = arr1.fill("python", 2);
+      document.writeln("<br>" + result2);
+      document.writeln("<br><h2>THIS IS FFROM METHOD</h2>");
+      var arrfrom = Array.from("hello");
+      document.writeln(arrfrom);
+      function func() {
+        document.writeln(Array.from(arguments));
+      }
+      document.writeln("<br> Array after applying from () on functin:");
+      func("html", "css", "js");
+      document.writeln("<br><h2>THIS IS filter METHOD</h2>");
+
+      var nums = [20, 30, 40, 50, 60];
+      function check(value) {
+        return value >= 30;
+      }
+      document.writeln("num array after filter()" + nums.filter(check));
+
+      document.writeln("<br><br><h2>THIS IS find METHOD</h2>");
+      var num2 = [10, 40, 30, 20, 50];
+      var num3 = num2.find((x) => x > 10);
+      document.writeln("num array after find:" + num3);
+
+      document.writeln("<br><br><h2>THIS IS findindex METHOD</h2>");
+      var num4 = num2.findIndex((x) => x > 10);
+
+      document.writeln("num array after findindex:" + num4);
+
+      document.writeln("<br><br><h2>THIS IS findindex METHOD</h2>");
+
+      num2.forEach((e) => {
+        document.writeln(e);
+      });
+    </script>
+  </body>
+</html>
