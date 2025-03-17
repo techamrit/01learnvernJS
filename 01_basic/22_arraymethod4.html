@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arraymethod4</title>
+  </head>
+  <body>
+    <script>
+      document.writeln("<h3>this is of( )method </h3> <br><br>");
+      document.writeln(Array.of(1, 2, 3, 4, 5, 6) + "<br>");
+      document.writeln(Array.of(1, 2, "hello", 3, 4, 5, 6));
+      document.writeln("<h3>this is push( )method </h3> <br><br>");
+      var arr1 = [1, 2, 3, 4, 5];
+      arr1.push(6);
+      document.writeln("add 6 using push( ) :" + arr1 + "<br>");
+      arr1.push(7);
+      document.writeln("add 6 using push( ) :" + arr1 + "<br>");
+      document.writeln("<h3>this is pop( )method </h3> <br><br>");
+      arr1.pop();
+      document.writeln("add 6 using push( ) :" + arr1 + "<br>");
+      arr1.pop();
+      document.writeln("add 6 using push( ) :" + arr1 + "<br>");
+
+      arr1.pop();
+      document.writeln("add 6 using push( ) :" + arr1 + "<br>");
+      document.writeln("<h3>this is reduse( )method </h3> <br><br>");
+
+      var arr2 = [2, 4, 6];
+      var a = arr2.reduce(
+        (accumulator, currentvalue) => accumulator + currentvalue
+      );
+      document.writeln("result after reduce() : " + a);
+    </script>
+  </body>
+</html>
