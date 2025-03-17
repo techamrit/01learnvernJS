@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array method 1</title>
+  </head>
+  <body>
+    <script>
+      // concat
+      var arr1 = ["c", "c++", "java"];
+      var arr2 = ["html", "css", "javascript", "python", "java"];
+      document.writeln(
+        "<h3> concsat creating array using caonstructor concsat</h3>"
+      );
+      document.writeln(arr1 + "<br>");
+      var consarray2 = arr1.concat(arr2);
+      document.writeln(consarray2 + "<br>");
+
+      var conarray = [...arr1, ...arr2];
+      document.writeln(conarray + "<br>");
+
+      document.writeln("<h3> copywithin creating array using  copywithin</h3>");
+
+      var copywith = arr2.copyWithin(0, 1, 4);
+      document.writeln(copywith);
+
+      document.writeln("<h3> entries creating array using  entries</h3>");
+
+      var arrentries = arr2.entries();
+
+      for (const element of arrentries) {
+        document.writeln(element);
+      }
+
+      arr3 = [10, 20, 30, 40, 50, 60, 70];
+
+      document.writeln("<h3> every () creating array using  every ()</h3>");
+      function check(value) {
+        return value > 5;
+      }
+      document.writeln(
+        "check for every element in array arr3 if its > 5 " + arr3.every(check)
+      );
+      document.writeln("<h3>  flat() creating array using   flat()</h3>");
+
+      var arr4 = [11, 12, [22, 33]];
+      var flatarr = arr4.flat();
+      document.writeln(flatarr);
+
+      document.writeln("<h3> flatMap () creating array using  flatMap ()</h3>");
+
+      var arr5 = [2, 4, 6, 8, 10];
+      var arrflatmap = arr5.flatMap((x) => [x + 2]);
+      document.writeln("flatMapped array:" + arrflatmap);
+    </script>
+  </body>
+</html>
