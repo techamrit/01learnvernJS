@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arraymethod3</title>
+  </head>
+  <style></style>
+  <body>
+    <script>
+      document.writeln("<h2>thsi is includes method this is k sansitiv</h2>");
+      var arr1 = ["c", "c++", "java", "html", "java"];
+      document.writeln(
+        " to check  if array has value 'java:'inclulde():" +
+          arr1.includes("java")
+      );
+      document.writeln("<h2>thsi is includes method </h2>");
+      document.writeln(
+        "to cheack of 'java' using indexof() " + arr1.indexOf("java")
+      );
+      document.writeln(
+        "<br> to cheack of 'java' using indexof()  after 3rd posotion: " +
+          arr1.indexOf("java", 3) +
+          "<br>"
+      );
+      document.writeln(
+        "<br> to cheack of 'anglur' using indexof()  anglur is not exist: " +
+          arr1.indexOf("anglur") +
+          "<br>"
+      );
+      document.writeln("<h2>thsi is isarray method </h2>");
+      document.writeln(Array.isArray(1, 2, 3, 4) + "<br>");
+      document.writeln(Array.isArray(arr1));
+
+      document.writeln("<h2>thsi is isarray method </h2>");
+      /* code for join*/
+
+      document.writeln("<br>");
+
+      var arr1 = ["c", "c++", "java", "html", "java"];
+
+      document.writeln("arr1 after join():  " + arr1.join(" "));
+
+      document.writeln("<h2>thsi is keys() method </h2>");
+      //   code for keys.
+
+      var keyarray = arr1.keys();
+      document.writeln(
+        "to check elemetn in keyarray array:" + keyarray + "<br>"
+      );
+      document.writeln("value in keyarray is : <br>");
+      for (const element of keyarray) {
+        document.writeln(element);
+      }
+      document.writeln("<h2>thsi is lastindexof() method </h2>");
+      document.writeln(arr1.lastIndexOf("java"));
+
+      document.writeln("<br><br><h2>thsi is lastindexof() method </h2>");
+      var arr2 = [5, 10, 15, 20];
+      var arrmap = arr2.map((x) => x / 5);
+      document.writeln("arr2 afte map : " + arrmap);
+    </script>
+  </body>
+</html>
