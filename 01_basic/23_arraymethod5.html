@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // sort
+      document.writeln("This is sort() Method:<br>");
+      var num = [7, 8, 9, 3, 1, 4, 5];
+      var language = ["html", "css", "java", "bootstrap"];
+      var num1 = [7, 8, 9, 3, 1, 4, 5];
+      document.writeln("sorted Number array: " + num.sort() + "<br>");
+      document.writeln("sorted Number array: " + language.sort() + "<br>");
+      document.writeln("sorted Number array: " + num1 + "<br>");
+      var result = num1.sort();
+      document.writeln("the minumum number from array : " + result[0] + "<br>");
+      document.writeln(
+        "the maximum number from array : " + result[result.length - 1] + "<br>"
+      );
+      document.writeln("This is splice() Method:<br>");
+
+      // splice : array.splice(start,delete,...element)
+
+      var weekdays = ["monday", "tuesday", "thursday", "friday"];
+      var addwed = weekdays.splice(2, 0, "wednesday");
+      document.writeln(weekdays + "<br>");
+      var wrongweekdays = [
+        "monday",
+        "tuesday",
+        "saturday",
+        "sunday",
+        "thursday",
+        "friday",
+      ];
+      var correctWeek = wrongweekdays.splice(2, 2, "wednesday");
+      document.writeln(wrongweekdays);
+
+      document.writeln("<h2>This is to() Method:</h2><br>");
+      // toLocaleString
+      var weekdays1 = [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+      ];
+
+      var a = ["a", 1, new Date("18 MAR 2025 18:16:00 UTC")];
+      var b = a.toLocaleString("en", { timeZone: "UTC" });
+      console.log(b);
+
+      document.writeln(a + "<br>");
+      document.writeln(b + "<br>");
+      document.writeln(weekdays1.toString() + "<br>");
+    </script>
+  </body>
+</html>
