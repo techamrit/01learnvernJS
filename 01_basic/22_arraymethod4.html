@@ -31,6 +31,22 @@
         (accumulator, currentvalue) => accumulator + currentvalue
       );
       document.writeln("result after reduce() : " + a);
+
+      document.writeln("<h3>this is some( )method </h3> <br>");
+      var arr3 = [50, 60, 70, 80, 90];
+      function test(argument) {
+        return argument > 50;
+      }
+      var result = arr3.some(test);
+      document.writeln("does array arr3 has any  value > 50 :" + result);
+      document.writeln("<h3>this is shift( )method </h3> <br>");
+      document.writeln(
+        "removing the very first element of Array arr3: " + arr3.shift()
+      );
+      document.writeln("<h3>this is slice( )method </h3> <br>");
+      var arr4 = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+      var arr4slice = arr4.slice(4, 6);
+      document.writeln(arr4slice);
     </script>
   </body>
 </html>
