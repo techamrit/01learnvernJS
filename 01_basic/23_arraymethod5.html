@@ -38,7 +38,7 @@
       var correctWeek = wrongweekdays.splice(2, 2, "wednesday");
       document.writeln(wrongweekdays);
 
-      document.writeln("<h2>This is to() Method:</h2><br>");
+      document.writeln("<h2>This is tolocalString() Method:</h2><br>");
       // toLocaleString
       var weekdays1 = [
         "monday",
@@ -57,6 +57,31 @@
       document.writeln(a + "<br>");
       document.writeln(b + "<br>");
       document.writeln(weekdays1.toString() + "<br>");
+
+      document.writeln("<h2>This is unshift() Method:</h2><br>");
+      var arr4 = [1, 2, 3, 4, 45];
+      document.writeln(arr4 + "<br>");
+      var result4 = arr4.unshift(0);
+      document.writeln(result4 + "<br>");
+      document.writeln(arr4);
+      document.writeln("<h2>This is value() Method:</h2><br>");
+      var weekdayvalue = [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+      ];
+      var valuearray = weekdays.values();
+      document.writeln(
+        "<br><br>after adding and Iterator to weekdays array : "
+      );
+      for (value of valuearray) {
+        document.writeln(value + "<br>");
+      }
+      console.log(valuearray);
     </script>
   </body>
 </html>
