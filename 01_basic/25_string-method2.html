@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string method</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      var str1 = "this is learnEarn!";
+      var str2 = " This is html , html is a must to learn web Designing";
+      var str3 = " This is html , Html is a must to learn web Designing";
+      var str4 = "THSI IS HTML , HTML IS A MUS TTO LEARN WEB DESIGNING";
+
+      document.writeln("incorrect string is :" + str1);
+      document.writeln(
+        "<br> correct string is :" + str1.replace("Earn", "Vern")
+      );
+      document.writeln("<br> Replace html: " + str2);
+      document.writeln("<br> Replace html: " + str2.replace(/html/g, "css"));
+      document.writeln("<br> Replace html: " + str3.replace(/html/gi, "css"));
+
+      document.writeln("<br><h2> this is substr()method</h2>");
+
+      document.writeln("<br>" + str2.substr(5, 10));
+      document.writeln("<br>" + str2.substr(-10, 5));
+      document.writeln("<br>" + str2.substr(5));
+      document.writeln("<br><h2> this is substring()method</h2>");
+      document.writeln("<br>" + str2.substring(5, 15));
+      document.writeln("<br><h2> this is slice()method</h2>");
+      document.writeln("<br>" + str2.slice());
+      document.writeln("<br>" + str2.slice(5));
+      document.writeln("<br>" + str2.slice(5, 20));
+      document.writeln("<br><h2> this is tolowercase()method</h2>");
+      document.writeln(str4.toLowerCase());
+      document.writeln("<br><h2> this is toLocallowercase()method</h2>");
+      document.writeln(str4.toLocaleLowerCase());
+      document.writeln("<br><h2> this is toLocalupparcase()method</h2>");
+      document.writeln(str2.toLocaleUpperCase());
+      document.writeln("<br><h2> this is tostring()method</h2>");
+      document.writeln("<br>" + str1.toString());
+      document.writeln("<br><h2> this is valueOf()method</h2>");
+      document.writeln("<br>" + str1.valueOf());
+      document.writeln("<br><h2> this is split()method</h2>");
+      document.writeln(str3.split(" "));
+      document.writeln("<br><h2> this is trim()method</h2>");
+      var str6 = "     this is    tring          without   space    ";
+      document.writeln(str6.trim());
+    </script>
+  </body>
+</html>

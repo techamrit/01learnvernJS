@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asssignment</title>
+  </head>
+  <body>
+    <script>
+      //Question1
+      var person = {
+        fName: "amrit",
+        lName: "pal",
+        age: 24,
+      };
+      document.writeln(`${person.fName} ${person.lName} ${person.age}`);
+      //question 2
+      var arrnum = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+      var arr1 = [12, 34, 45, 68, 67, 3, 45];
+
+      document.writeln("<br>");
+      //   document.writeln(arrnum);
+
+      function check(value) {
+        return value > arrnum[4];
+      }
+      document.writeln(arrnum.filter(check));
+      document.writeln("<br>");
+
+      var index1 = Math.max.apply(this, arrnum);
+      document.writeln(arrnum.indexOf(index1));
+
+      //question 3
+
+      var string1 = new String(" This is LearnVearn. ");
+      var str3 = "LearnVern is an amazing place to learn javascript.";
+      document.writeln("<br>");
+
+      str2 = string1.slice(9);
+      document.writeln(str2);
+      document.writeln("<br>");
+
+      document.writeln(string1.trim());
+      var string4 = string1.concat(str3);
+      document.writeln("<br>");
+      document.writeln(string4);
+
+      //   question4
+
+      var todaydate = new Date();
+      var todaydate2 = todaydate.getDate();
+      var todayyear = todaydate.toDateString();
+      document.writeln("<br>");
+      document.writeln("today date is " + todaydate2);
+      document.writeln("<br>");
+
+      //   document.writeln(todaydate);
+      document.writeln(todayyear);
+      document.writeln("<br>");
+      //   Question 5
+
+      var arr2 = [1, 2, 3, 45, 7, 8, 9, 90];
+      var arr3 = Math.max.apply(this, arr2);
+      var arr4 = Math.min.apply(this, arr2);
+      document.writeln(" max value of arr2 is : -" + Math.max(arr3));
+      document.writeln("<br>");
+      document.writeln(" min value of arr2 is : -" + Math.min(arr4));
+      var x = 1.5;
+      document.writeln(Math.cos(x) + "<br>");
+      document.writeln(Math.sin(x) + "<br>");
+      document.writeln(Math.tan(x) + "<br>");
+
+      document.writeln(Math.cosh(x) + "<br>");
+      document.writeln(Math.sinh(x) + "<br>");
+      document.writeln(Math.tanh(x) + "<br>");
+
+      document.writeln(Math.acos(x) + "<br>");
+      document.writeln(Math.asin(x) + "<br>");
+      document.writeln(Math.atan(x) + "<br>");
+      //Question 6
+
+      var a = 122;
+      var b = 23e4;
+      var c = "abc";
+      document.writeln(isNaN(a));
+      document.writeln(isNaN(b));
+      document.writeln(isNaN(c));
+    </script>
+  </body>
+</html>

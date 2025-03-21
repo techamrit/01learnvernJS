@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mathMethods</title>
+  </head>
+  <body>
+    <script>
+      document.writeln("<h2>Math Methods</h2><br><br>");
+      var num1 = -5;
+      var num2 = 4.4;
+      var num3 = 4.4;
+
+      function randomnum() {
+        return Math.random() * 1000000;
+      }
+
+      document.writeln("abs() of  : " + num1 + "   " + Math.abs(num1));
+      document.writeln("<br>abs() of :  " + Math.abs(num1));
+      document.writeln("<br>ceil() of :  " + Math.ceil(num2));
+      document.writeln("<br>floor() of  : " + Math.floor(num3));
+      document.writeln("<br>exp() of  : " + Math.exp(2));
+      document.writeln("<br>power() of 3 is  : " + Math.pow(2, 3));
+      document.writeln("<br>power() of  : " + Math.pow(1.2, 5));
+      document.writeln("<br>random() of  : " + Math.floor(randomnum()));
+      document.writeln("<br>random() of  : " + Math.round(4.6));
+      document.writeln("<br>sign() of  : " + Math.sign(-5));
+      document.writeln("<br>sign() of  : " + Math.sign(0));
+      document.writeln("<br>sign() of  : " + Math.sign(5));
+      document.writeln("<br>sqrt() of  : " + Math.sqrt(8));
+      document.writeln("<br>cbrt() of  : " + Math.cbrt(8));
+      document.writeln("<br>trunc() of  : " + Math.trunc());
+    </script>
+  </body>
+</html>

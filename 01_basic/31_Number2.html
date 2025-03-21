@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 2;
+      var b = 5;
+      document.writeln("<h3>Number methods </h3>");
+      document.writeln("isfinite :- " + isFinite(2));
+      document.writeln("isfinite :- " + isFinite("d"));
+      document.writeln("isfinite :- " + isFinite(2, 4));
+      document.writeln("isfinite :- " + isFinite(4, 2));
+      document.writeln("isfinite :- " + isFinite(NaN));
+      document.writeln("isfinite :- " + isFinite(-5));
+
+      document.writeln("<h2>integer methods </h2>");
+      document.writeln("integer :- " + Number.isFinite(Infinity));
+      document.writeln("integer :- " + isFinite(3));
+
+      document.writeln("<h2> parseFloat methods </h2>");
+      document.writeln("parseFloat :- " + Number.parseFloat(55));
+      document.writeln("<br>parseFloat - " + Number.parseFloat("55"));
+      document.writeln("<br>parseFloat - " + Number.parseFloat("hello"));
+      document.writeln("<br>parseFloat - " + Number.parseFloat("55hello"));
+
+      document.writeln("<h2> parseInt methods </h2>");
+      document.writeln("<br>parseInt 55 - " + Number.parseInt("55"));
+      document.writeln("<br>parseInt 55 - " + Number.parseInt("55"));
+      document.writeln("<br>parseInt hello - " + Number.parseInt("hello"));
+      document.writeln("<br>parseInt 55Hello :- " + Number.parseInt("55Hello"));
+
+      document.writeln("<h2> toExponential methods </h2>");
+      document.writeln(
+        "<br> convert '2' to Exponentioal Number with base 2 :- " +
+          a.toExponential(2)
+      );
+      document.writeln(
+        "<br> convert '2' to Exponentioal Number with base 2 :- " +
+          b.toExponential(2)
+      );
+      document.writeln("<h2> tofixed methods </h2>");
+      document.writeln("<br>" + Math.PI.toFixed(2));
+      document.writeln("<h2> toprecision methods </h2>");
+      document.writeln("<br>" + Math.PI.toPrecision(2));
+      document.writeln("<h2> toString methods </h2>");
+      document.writeln("value of '2' in string :-" + a.toString());
+    </script>
+  </body>
+</html>

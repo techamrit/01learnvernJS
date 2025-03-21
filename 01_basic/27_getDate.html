@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dategetdate</title>
+  </head>
+  <body>
+    <script>
+      var d1 = new Date();
+      var year = "";
+      var d2 = d1.getMonth();
+      switch (d2) {
+        case 0:
+          year = "january";
+          break;
+        case 1:
+          year = "feb";
+          break;
+        case 2:
+          year = "mar";
+          break;
+        case 3:
+          year = "apri";
+          break;
+        case 5:
+          year = "may";
+          break;
+
+        default:
+          break;
+      }
+
+      document.writeln("<br><br> houres   :  " + d1.getHours());
+      document.writeln("<br><br> day" + d1.getDay());
+      document.writeln("<br><br> year " + d1.getFullYear());
+      document.writeln("<br><br>" + year);
+    </script>
+  </body>
+</html>
