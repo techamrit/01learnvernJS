@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+     function getName() {  var x =
+    document.getElementById("firstName").value; alert(x);  }  x.innerhtml
+    */
+    </script>
+    <!-- enter your name
+    <input type="text" id="firstName" />
+    <input
+      type="button"
+      value="click me!"
+      name="cleck me"
+      onclick="getName()"
+    />  -->
+    <!-- <script>
+      var age = prompt("please enter your age:");
+      var ageelement = document.getElementsByClassName("age");
+      ageelement.forEach((element) => {
+        element.textContent = `your age is : ${age}`;
+      });
+    </script>
+ -->
+    <p class="age"></p>
+
+    <p class="age"></p>
+
+    <p class="age"></p>
+
+    <p class="age"></p>
+
+    <div id="ageContainer">
+      <p class="age"></p>
+      <p class="age"></p>
+      <p class="age"></p>
+      <p class="age"></p>
+      <p class="age"></p>
+    </div>
+
+    <script>
+      // Prompt the user for their age
+      const age = prompt("Please enter your age:");
+
+      // Get all <p> elements with the class "age"
+      const ageElements = document.querySelectorAll(".age");
+
+      // Display the age in each <p> element
+      ageElements.forEach((element) => {
+        element.textContent = `Your age is: ${age}`;
+      });
+    </script>
+  </body>
+</html>
