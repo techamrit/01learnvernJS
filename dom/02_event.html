@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom form</title>
+  </head>
+  <body>
+    <script>
+      function showNumber() {
+        var telephonenois = document.getElementById("telephone").value;
+        alert("wlecome : -" + telephonenois);
+      }
+    </script>
+    <form action="" name="form1">
+      enter your no <input type="text" id="telephone" />
+      <br />
+      <input type="button" value="click me" onclick="showNumber()" />
+    </form>
+  </body>
+</html>

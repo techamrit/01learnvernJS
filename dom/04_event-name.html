@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom form</title>
+  </head>
+  <body>
+    <script>
+      function showName() {
+        var dom = document.getElementsByName("gender");
+        alert("wlecome : -" + dom.length);
+        alert("values are : " + dom[0].defaultValue)
+        console.log(dom)
+      }
+    </script>
+    <form action="" name="form1">
+      enter your are male <input type="radio" name="gender" value="male" />
+      <br />
+    <form action="" name="form1">
+      enter your are gemale <input type="radio" name="gender" value="female"/>
+      <br />
+      <input type="button" value="click me" onclick="showName()" />
+    </form>
+  </body>
+</html>
