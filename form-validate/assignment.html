@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #tel {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function validateform() {
+        var firstname = document.myform.firstname.value.trim();
+        var LastName = document.myform.LastName.value.trim();
+        var password = document.myform.password.value;
+        var confirmPassword = document.myform.confirmPassword.value;
+        var Telephone = document.myform.Telephone.value.trim();
+        // var TelephoneNo = document.myform.number.value;
+        var Email = document.myform.Email.value.trim();
+
+        var atposition = Email.indexOf("@");
+        var dotposition = Email.indexOf(".");
+
+        if (
+          firstname == null ||
+          firstname == "" ||
+          firstname == "!,@,#,$,%,^,&,*,(,),_,-,+,="
+        ) {
+          alert("no name cannot be empty :");
+          return false;
+        }
+        if (LastName == null || LastName == "") {
+          alert("no last name cannot be empty :");
+          return false;
+        }
+        if (password < 5 || password == "") {
+          alert("password cannot be empty :");
+          return false;
+        }
+        if (
+          atposition < 1 ||
+          dotposition < atposition + 2 ||
+          dotposition + 2 >= Email.length
+        ) {
+          alert("Email is not corret");
+          return false;
+        }
+        if (password == confirmPassword) {
+          return true;
+        } else {
+          alert("password dose't match :");
+          return false;
+        }
+
+        // if (isNaN(TelephoneNo)) {
+        //   document.getElementById("Tel").innerHTML = "Please enter vaild no.";
+        //   return false;
+        // }
+        if (isNaN(Telephone) || Telephone === "") {
+          document.getElementById("tel").innerHTML =
+            "Please enter a valid telephone number.";
+          return false;
+        }
+        return true;
+      }
+    </script>
+
+    <h2>Registration Form</h2>
+    <form name="myform" method="get" onsubmit="return validateform()">
+      <label for="first name">
+        First Name
+        <input type="text" name="firstname" />
+      </label>
+      <br /><br />
+      <label for="LastName">
+        Last Name
+        <input type="text" name="LastName" />
+      </label>
+      <br /><br />
+      <label for="password">
+        password
+        <input type="text" name="password" />
+      </label>
+      <br /><br />
+      <label for="confirmPassword"> confirm Password</label>
+      <input type="text" name="confirmPassword" /><br /><br />
+
+      <label for="Telephone">Telephone:</label>
+      <input type="text" name="Telephone" />
+      <br />
+      <span id="tel"></span><br /><br />
+
+      <label for="Email"> Email</label>
+      <input type="text" name="Email" /><br /><br />
+
+      <input type="submit" name="submit" value="submit" /><br /><br />
+    </form>
+  </body>
+</html>

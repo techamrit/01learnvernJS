@@ -1,0 +1,117 @@
+Here's a simple JavaScript program that creates a form with the specified fields
+and includes validation for each field. The validation will trigger when the
+submit button is clicked. ```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required /><br /><br />
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required /><br /><br />
+
+      <label for="telephone">Telephone Number:</label>
+      <input
+        type="tel"
+        id="telephone"
+        required
+        pattern="[0-9]{10}"
+      /><br /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required minlength="6" /><br /><br />
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" required /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="errorMessages" class="error"></div>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          const firstName = document.getElementById("firstName").value.trim();
+          const lastName = document.getElementById("lastName").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const telephone = document.getElementById("telephone").value.trim();
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          let errorMessages = "";
+
+          // Validation
+          if (!firstName) {
+            errorMessages += "First Name is required.<br>";
+          }
+          if (!lastName) {
+            errorMessages += "Last Name is required.<br>";
+          }
+          if (!email) {
+            errorMessages += "Email is required.<br>";
+          } else if (!validateEmail(email)) {
+            errorMessages += "Invalid email format.<br>";
+          }
+          if (!telephone) {
+            errorMessages += "Telephone Number is required.<br>";
+          } else if (!/^\d{10}$/.test(telephone)) {
+            errorMessages += "Telephone Number must be 10 digits.<br>";
+          }
+          if (!password) {
+            errorMessages += "Password is required.<br>";
+          } else if (password.length < 6) {
+            errorMessages += "Password must be at least 6 characters long.<br>";
+          }
+          if (password !== confirmPassword) {
+            errorMessages += "Passwords do not match.<br>";
+          }
+
+          // Display error messages
+          document.getElementById("errorMessages").innerHTML = errorMessages;
+
+          // If no errors, you can submit the form or perform further actions
+          if (!errorMessages) {
+            alert("Form submitted successfully!");
+            // You can submit the form here if needed
+            // this.submit();
+          }
+        });
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+      }
+    </script>
+  </body>
+</html>
+```
+<!-- 
+### Explanation:
+- The form includes fields for first name, last name, email, telephone number, password, and confirm password.
+- Each field has basic HTML5 validation attributes (like `required` and `pattern`).
+- When the form is submitted, JavaScript checks each field for validity and displays error messages if any field is invalid.
+- The email validation uses a regular expression to ensure the format is correct.
+- The telephone number is validated to ensure it is exactly 10 digits.
+- Passwords must match and have a minimum length of 6 characters. 
+
+You can copy and paste this code into an HTML file and open it in a web browser to see it in action. -->

@@ -28,7 +28,7 @@
       });
     </script>
  -->
-    <p class="age"></p>
+    <!-- <p class="age"></p>
 
     <p class="age"></p>
 
@@ -54,7 +54,64 @@
       // Display the age in each <p> element
       ageElements.forEach((element) => {
         element.textContent = `Your age is: ${age}`;
-      });
     </script>
+      }); -->
+
+    <!-- <script>
+      var name = document.getElementsByName("furit").value;
+      alert(name);
+      //   for (const value of name) {
+      //     alert(value);
+      //   }
+    </script> -->
+    <form action="">
+      <label for="">
+        <input type="radio" name="furit" value="mango" id="" /> mango
+      </label>
+      <label for="">
+        <input type="radio" name="furit" value="apple" id="" /> apple
+      </label>
+      <label for="">
+        <input type="radio" name="furit" value="graps" id="" /> graps
+      </label>
+      <label for="">
+        <input type="radio" name="furit" value="orange" /> orange
+      </label>
+    </label>
+    <button type="button" onclick="getGenderValues()">Get Gender Values</button>
+</form>
+
+<script>
+
+    function getGenderValues() {
+        const genderElements = document.getElementsByName('gender');
+        const genderValues = [];
+
+        for (let i = 0; i < genderElements.length; i++) {
+            genderValues.push(genderElements[i].value);
+        }
+
+        alert('Possible gender values: ' + genderValues.join(', '));
+    }
+</script>
+<script>
+    function getGenderValues(){
+        var fruitElement = document.getElementsByName("furit")
+        var fruitValue = []
+        for (let i = 0; i < fruitElement.length; i++) {
+             fruitValue.push(fruitElement[i].value);
+
+            
+        }
+        for (const values of fruitValue) {
+            
+            alert("possible gender values:" +values)
+        }
+    }
+</script>
+
+</body>
+</html>
+    </form>
   </body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #getmsg {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function validateForm() {
+        var email = document.myform.email.value;
+        var atposition = email.indexOf("@");
+        var dotposition = email.indexOf(".");
+        document.writeln(atposition);
+        document.writeln(atposition < 1);
+        // document.writeln(atposition < 1);
+        document.writeln(atposition + 2);
+        document.writeln(dotposition + 2);
+        document.writeln(email.length);
+
+        if (
+          atposition < 1 ||
+          dotposition < atposition + 2 ||
+          dotposition + 2 >= email.length
+        ) {
+          alert("email is not correct");
+          return false;
+        }
+      }
+    </script>
+    <h2>Ragistation form email</h2>
+    <form action="" method="get" name="myform" onsubmit="return validateForm()">
+      <label for="">Enter email :<input type="text" name="email" /></label
+      ><br />
+      <span id="getmsg"></span><br />
+
+      <br /><br />
+      <label for=""><input type="submit" value="submit" onclick="" /></label>
+    </form>
+  </body>
+</html>
