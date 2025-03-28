@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classs</title>
+  </head>
+  <body>
+    <script>
+      var emp = class {
+        constructor(id, name) {
+          this.id = id;
+          this.name = name;
+        }
+        detail() {
+          document.writeln(this.id + " " + this.name + "<br>");
+        }
+      };
+      var obj = new emp(1, " abc");
+      obj.detail();
+      var obj2 = new emp(2, "edf");
+      obj2.detail();
+      var emp = class {
+        constructor(id, name) {
+          this.id = id;
+          this.name = name;
+        }
+        detail() {
+          document.writeln(this.id + " " + this.name + "<br>");
+        }
+      };
+      var obj3 = new emp(3, " abc");
+      obj3.detail();
+      var obj4 = new emp(4, "edf");
+      obj4.detail();
+    </script>
+  </body>
+</html>

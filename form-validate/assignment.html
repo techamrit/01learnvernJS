@@ -59,12 +59,17 @@
         //   document.getElementById("Tel").innerHTML = "Please enter vaild no.";
         //   return false;
         // }
-        if (isNaN(Telephone) || Telephone === "") {
-          document.getElementById("tel").innerHTML =
-            "Please enter a valid telephone number.";
-          return false;
-        }
+
         return true;
+      }
+    </script>
+    <script>
+      var Telephone = document.myform.Telephone.value.trim();
+
+      if (isNaN(Telephone) || Telephone === "") {
+        document.getElementById("tel").innerHTML =
+          "Please enter a valid telephone number.";
+        return false;
       }
     </script>
 

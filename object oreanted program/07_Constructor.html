@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>constructor</title>
+  </head>
+  <body>
+    <script>
+      /*parants*/
+      class Company {
+        constructor(companyName) {
+          this.companyName = "mahindra";
+        }
+      }
+      /*child*/
+      class Employee extends Company {
+        constructor(id, name) {
+          super();
+          this.id = id;
+          this.name = name;
+        }
+      }
+      var emp1 = new Employee(122, "amrit", "mahindara");
+      document.writeln(emp1.id + " " + emp1.name + " " + emp1.companyName);
+    </script>
+  </body>
+</html>
