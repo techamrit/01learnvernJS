@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   class Test {
+      //       static display() {
+      //         return "A Static method 1 is called";
+      //       }
+      //     show() {
+      //       document.writeln(Test.display());
+      //       return "this is non static method";
+      //     }
+      //   }
+      //   var t = new Test();
+      //   t.show();
+
+      class Test {
+        // constructor() {
+        //   document.writeln(Test.display() + " <br>");
+        //   document.writeln(this.constructor.display());
+
+        //   //   return " this is simple static method 1";
+        // }
+        static display() {
+          return " this is simple static method call non-static to static ";
+        }
+        show() {
+          document.writeln(Test.display());
+          return " this is simple static method call non-static to static";
+        }
+      }
+      var t = new Test();
+      t.show();
+      //   document.writeln(Test.display() + " <BR>");
+      //   document.writeln(Test.display());
+    </script>
+  </body>
+</html>

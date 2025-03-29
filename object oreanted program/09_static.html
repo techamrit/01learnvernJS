@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>static</title>
+  </head>
+  <body>
+    <script>
+      // example two
+      //   class Test {
+      //     static display1() {
+      //       return "A Static method 1 is called";
+      //     }
+      //     static display2() {
+      //       return "A Static method 2 is called";
+      //     }
+      //   }
+      //   document.writeln(Test.display1() + " <br>");
+      //   document.writeln(Test.display2() + " <br>");
+      // example three
+
+      //   class Test {
+      //     static display() {
+      //       return "A Static method 1 is called";
+      //     }
+      //     static display() {
+      //       return "A Static method 2 is called";
+      //     }
+      //   }
+      //   document.writeln(Test.display() + " <br>");
+
+      //   example of four
+
+      class Test {
+        constructor() {
+          document.writeln(Test.display() + "<br>");
+          document.writeln(this.constructor.display());
+        }
+        static display() {
+          return "A Static method 1 is called";
+        }
+      }
+      var t = new Test();
+    </script>
+  </body>
+</html>
