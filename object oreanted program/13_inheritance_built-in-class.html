@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inheritance built in class</title>
+  </head>
+  <body>
+    <script>
+      class Movement extends Date {
+        constructor() {
+          super();
+        }
+      }
+      var m = new Movement();
+      document.writeln(
+        "Today's date is = " +
+          m.getDate() +
+          "/" +
+          m.getMonth() +
+          "/" +
+          m.getFullYear()
+      );
+    </script>
+  </body>
+</html>
