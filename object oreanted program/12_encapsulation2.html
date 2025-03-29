@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>encapsuation with function</title>
+  </head>
+  <body>
+    <script>
+      //   function tata(model, speed) {
+      //     var name = model;
+      //     var meter = speed;
+      //     Object.defineProperty(this, "model", {
+      //       get: function () {
+      //         return name;
+      //       },
+      //       set: function (name) {
+      //         this.name = name;
+      //       },
+      //     });
+      //     Object.defineProperty(this, "speed", {
+      //       get: function () {
+      //         return speed;
+      //       },
+
+      //       set: function (meter) {
+      //         this.meter = meter;
+      //       },
+      //     });
+      //   }
+
+      //   var cars = new tata("swift", 100);
+      //   document.writeln(cars.model + " " + cars.speed);
+    </script>
+
+    <script>
+      //   function Student(name, marks) {
+      //     var sName = name;
+      //     var sMarks = marks;
+      //     Object.defineProperty(this, "name", {
+      //       get: function () {
+      //         return sName;
+      //       },
+      //       set: function (sName) {
+      //         this.sName = sName;
+      //       },
+      //     });
+      //     Object.defineProperty(this, "marks", {
+      //       get: function () {
+      //         return sMarks;
+      //       },
+      //       set: function (sMarks) {
+      //         this.sMarks = sMarks;
+      //       },
+      //     });
+      //   }
+
+      //   var stud = new Student("amrit", 122);
+      //   document.writeln(stud.name + " " + stud.marks);
+    </script>
+    <script>
+      function Student(name, marks) {
+        var Sname = name;
+        var Smarks = marks;
+        Object.defineProperty(this, "name", {
+          get: function () {
+            return Sname;
+          },
+          set: function (Sname) {
+            this.Sname = Sname;
+          },
+        });
+        Object.defineProperty(this, "marks", {
+          get: function () {
+            return Smarks;
+          },
+          set: function () {
+            this.Smarks = Smarks;
+          },
+        });
+      }
+
+      var stud = new Student("amrit", 123);
+      document.writeln(stud.name + " " + stud.marks);
+    </script>
+  </body>
+</html>
