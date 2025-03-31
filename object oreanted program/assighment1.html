@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class re-declare</title>
+  </head>
+  <body>
+    <script>
+      /*Write a JavaScript program to declare a class named Employee. 
+      Create two instances of this class and re- declare the same classs without any console error.*/
+
+      var Employee = class {
+        constructor(name, salary) {
+          this.name = name;
+          this.salary = salary;
+        }
+        detail() {
+          console.log(this.name + " " + this.salary);
+        }
+      };
+      var emp1 = new Employee("amrit", 19292);
+      emp1.detail();
+      var emp2 = new Employee("vivek", 25000);
+      emp2.detail();
+      var Employee = class {
+        constructor(name, salary) {
+          this.name = name;
+          this.salary = salary;
+        }
+        detail() {
+          console.log(this.name + " " + this.salary);
+        }
+      };
+      var emp3 = new Employee("rahul", 12345);
+      emp3.detail();
+      var emp4 = new Employee("mukul", 45678);
+      emp4.detail();
+    </script>
+  </body>
+</html>

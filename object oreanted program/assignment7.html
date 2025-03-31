@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment7</title>
+  </head>
+  <body>
+    <script>
+      /*write a java Script program using to create two classes that consist of a method with same name.
+         call both the methods and print the class names accordingly.*/
+      class one {
+        display() {
+          document.writeln("This is method A " + "<br>");
+        }
+      }
+      class two {
+        display() {
+          document.writeln("this is method B");
+        }
+      }
+      var a = [new one(), new two()];
+      a.forEach((msg) => msg.display());
+      document.writeln("<br>");
+    </script>
+  </body>
+</html>

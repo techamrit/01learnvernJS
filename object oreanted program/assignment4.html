@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment4</title>
+  </head>
+  <body>
+    <script>
+      /* Write a JavaScript Program and create a class Vehicle with constructor to
+ print statement “This is Vehicle class”. Create another class Car which extends Vehicle
+ class. While instantiating the Car class call the Vehicle class constructor with
+ appropriate method*/
+      class Vehicle {
+        constructor() {
+          document.writeln("This is Vehicle class");
+        }
+        detail() {}
+      }
+      class Car extends Vehicle {
+        constructor() {
+          super();
+        }
+      }
+
+      var vehi = new Car();
+      document.writeln(vehi());
+      //   class Vehicle {
+      //     constructor() {
+      //       this.Statement = "This is Vehicle class";
+      //     }
+      //     detail() {}
+      //   }
+      //   class Car extends Vehicle {
+      //     constructor() {
+      //       super();
+      //     }
+      //   }
+
+      //   var vehi = new Car();
+      //   document.writeln(vehi.Statement);
+    </script>
+  </body>
+</html>

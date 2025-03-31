@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example of Abstract</title>
+  </head>
+  <body>
+    <script>
+      function vehicle() {
+        this.vehicleName = vehicleName;
+        throw new Error(" you cannot create instance of an aabstract class");
+      }
+      vehicle.prototype.display = function () {
+        return "vehicle is  : " + this.vehicleName;
+      };
+
+      function Bike(vehicleName) {
+        this.vehicleName = vehicleName;
+      }
+      Bike.prototype = Object.create(vehicle.prototype);
+      var bike = new Bike("honda");
+      document.writeln(bike.display());
+      document.writeln("<br>");
+      document.writeln(bike instanceof vehicle);
+      document.writeln("<br>");
+      document.writeln(bike instanceof Bike);
+    </script>
+  </body>
+</html>

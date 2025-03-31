@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment8</title>
+  </head>
+  <body>
+    <script>
+      /*is it possible to create  a instance of and abstract class? 
+        create and program which has one frnction named vehicle and throw appropriate error while calling the function named vehicle and throw appropriate error while calling the function using prototype based approach.*/
+      function Vehicle() {
+        this.VehicleName = VehicleName;
+        throw new Error("cannot create instans of an abstara  object");
+      }
+      Vehicle.prototype.detaile = function () {
+        return this.VehicleName;
+      };
+      var vehi = new Vehicle("car");
+    </script>
+  </body>
+</html>

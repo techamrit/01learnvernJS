@@ -8,13 +8,19 @@
   <body>
     <script>
       function vehicle() {
-        // this.vehicleName = vehicleName;
+        this.vehicleName = vehicleName;
         throw new Error(" you cannot create instance of an aabstract class");
       }
       vehicle.prototype.display = function () {
-        return this.vehicleName;
+        return "vehicle is  : " + this.vehicleName;
       };
-      var v = vehicle();
+
+      function Bike(vehicleName) {
+        this.vehicleName = vehicleName;
+      }
+      Bike.prototype = Object.create(vehicle.prototype);
+      var bike = new Bike("honda");
+      document.writeln(bike.display());
     </script>
   </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment - 2</title>
+  </head>
+  <body>
+    <script>
+      /*write a javaScript Program to create an Object name Employee with properties ID,Name and Salary,
+      using any object difining mehod. Print the values on document in one line.
+        1. Create atleast 5 instances of Employee
+        2. Using appropriate Object method get the Employee name of highest salary*/
+
+      function Employee(id, name, Salary) {
+        this.id = id;
+        this.name = name;
+        this.Salary = Salary;
+      }
+
+      Emp1 = new Employee(1, "amrit", 10000);
+      Emp2 = new Employee(2, "manish", 20000);
+      Emp3 = new Employee(3, "rahul", 30000);
+      Emp4 = new Employee(4, "vivek", 40000);
+      Emp5 = new Employee(5, "garvit", 50000);
+
+      var emps = [Emp1, Emp2, Emp3, Emp4, Emp5];
+      document.writeln(
+        emps
+          .map(
+            (person) =>
+              `Id : ${person.id} Name: ${person.name} Salary : ${person.Salary}`
+          )
+          .join(" | " + "<br>")
+      );
+
+      function getHeighSalary(emps) {
+        return emps.reduce((prev, crruent) =>
+          prev > crruent ? prev : crruent
+        );
+      }
+      var highestSalary = getHeighSalary(emps);
+      document.writeln(
+        `<br> Employee with the highest salary: ${highestSalary.name} and Id: ${highestSalary.id}`
+      );
+    </script>
+  </body>
+</html>

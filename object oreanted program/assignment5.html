@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment5</title>
+  </head>
+  <body>
+    <script>
+      //   class Student {
+      //     constructor(name, rollno) {
+      //       this.name = name;
+      //       this.rollno = rollno;
+      //     }
+      //     getName() {
+      //       return this.name;
+      //     }
+      //     setName(name) {
+      //       this.name = name;
+      //     }
+      //     getRoolno() {
+      //       return this.rollno;
+      //     }
+      //     setRollno(rollno) {
+      //       this.rollno = rollno;
+      //     }
+      //   }
+
+      //   var stud = new Student();
+      //   stud.setName("amrit");
+      //   stud.setRollno(12);
+      //   document.writeln(stud.getName() + " " + stud.getRoolno());
+    </script>
+    <script>
+      function Student(name, marks) {
+        var sName = name;
+        var sMarks = marks;
+        Object.defineProperty(this, "name", {
+          get: function () {
+            return sName;
+          },
+          set: function (sName) {
+            this.sName = sName;
+          },
+        });
+        Object.defineProperty(this, "marks", {
+          get: function () {
+            return sMarks;
+          },
+          set: function (sMarks) {
+            this.sMarks = sMarks;
+          },
+        });
+      }
+
+      var stud = new Student("amrit", 20);
+      document.writeln(stud.name + " " + stud.marks);
+    </script>
+  </body>
+</html>

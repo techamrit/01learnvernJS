@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=ds" />
+    <title>assignment6</title>
+  </head>
+  <body>
+    <script>
+      /*Write a JavaScript Program and create a class Vehicle. Create another class
+    Bike which is the child class of the Vehicle class. Print Bike class properties and Parent
+    class properties using Bike class constructor*/
+      class Vehicle {
+        constructor() {
+          this.company = "honda";
+        }
+      }
+      class Bike extends Vehicle {
+        constructor(name, speed) {
+          super();
+          this.name = name;
+          this.speed = speed;
+        }
+      }
+      var pri = new Bike("cd", 59000);
+      document.writeln(pri.name + "<br>");
+      document.writeln(pri.speed + "<br>");
+      document.writeln(pri.company + "<br>");
+    </script>
+  </body>
+</html>
