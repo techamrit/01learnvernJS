@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inheritance</title>
+  </head>
+  <body>
+    <script>
+      //   function Bike(company) {
+      //     this.company = company;
+      //   }
+
+      //   Bike.prototype.getcompany = function () {
+      //     return this.company;
+      //   };
+
+      //   function vicale(name, price) {
+      //     this.name = name;
+      //     this.price = price;
+      //   }
+      //   var bike = new Bike("honda");
+      //   vicale.prototype = bike;
+
+      //   var v1 = new vicale("shine", 23088);
+
+      //   document.writeln("bike name" + v1.name);
+      //   document.writeln("bike price" + v1.price);
+      //   document.writeln("bike company" + v1.company);
+    </script>
+
+    <script>
+      function Bike(company) {
+        this.company = company;
+      }
+      Bike.prototype.getcompany = function () {
+        return this.company;
+      };
+
+      function vicale(name, price) {
+        this.name = name;
+        this.price = price;
+      }
+
+      var bike = new Bike("honda");
+      vicale.prototype = bike;
+      var v1 = new vicale("amrit", 120000);
+
+      document.writeln("bike Name is: - " + v1.name + " <br>");
+      document.writeln("bike Name is: - " + v1.price + " <br>");
+      document.writeln("bike Name is: - " + v1.company + " <br>");
+    </script>
+  </body>
+</html>

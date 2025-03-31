@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pholymorphism</title>
+  </head>
+  <body>
+    <script>
+      function A() {}
+      A.prototype.display = function () {
+        return "this is A method ";
+      };
+
+      function B() {}
+      B.prototype.display = function () {
+        return "this is B method ";
+      };
+      B.prototype = Object.create(A.prototype);
+      var a = [new A(), new B()];
+      a.forEach((msg) => {
+        document.writeln(msg.display() + "<br>");
+      });
+    </script>
+  </body>
+</html>
