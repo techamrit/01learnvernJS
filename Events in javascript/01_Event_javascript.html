@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse related event</title>
+    <style>
+      .react {
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        border: 1px solid;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" value="change color" onclick="changeColor()" />
+    <div
+      class="react"
+      onmouseover="onMouseOver()"
+      onmouseout="onMouuseOut()"
+      onmousedown="onMouseDown()"
+      onmouseup="onMouseUp()"
+      onmousemove="onMouseMove()"
+    ></div>
+
+    <script>
+      function changeColor() {
+        document.body.style.backgroundColor = "red";
+      }
+      function onMouseOver() {
+        document.body.style.backgroundColor = "yellow";
+      }
+      function onMouuseOut() {
+        document.body.style.backgroundColor = "green";
+      }
+      function onMouseDown() {
+        document.body.style.backgroundColor = "blue";
+      }
+      function onMouseUp() {
+        document.body.style.backgroundColor = "hotpink";
+      }
+      function onMouseMove() {
+        document.body.style.backgroundColor = "gold";
+      }
+    </script>
+  </body>
+</html>

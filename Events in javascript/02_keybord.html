@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keybord related event</title>
+    <style>
+      .react {
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        border: 1px solid;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" onkeydown="onkeyDown()" onkeyup="onKeyUp()" />
+    <!-- <div class="react"></div> -->
+
+    <script>
+      function onkeyDown() {
+        document.body.style.backgroundColor = "red";
+      }
+      function onKeyUp() {
+        document.body.style.backgroundColor = "yellow";
+      }
+    </script>
+  </body>
+</html>

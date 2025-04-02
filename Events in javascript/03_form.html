@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>keybord related event</title>
+    <style>
+      .react {
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+        border: 1px solid;
+        padding: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" onsubmit="Submit()">
+      <input type="text" onfocus="onFocus()" onblur="Blur()" />
+      <!-- <input type="text"  /> -->
+      <select name="" id="myDropDown" onchange="onChange()">
+        <option value="">----select----</option>
+        <option value="">male</option>
+        <option value="">female</option>
+      </select>
+      <input type="submit" value="submit" />
+    </form>
+    <!-- <input type="text" onkeydown="onkeyDown()" onkeyup="onKeyUp()" /> -->
+    <!-- <div class="react"></div> -->
+
+    <script>
+      function onFocus() {
+        document.body.style.backgroundColor = "red";
+      }
+      function Blur() {
+        document.body.style.backgroundColor = "yellow";
+      }
+      function onChange() {
+        document.body.style.backgroundColor = "lightgreen";
+      }
+      function Submit() {
+        // document.body.style.backgroundColor = "yellow";
+        alert("form submit work");
+      }
+    </script>
+  </body>
+</html>
