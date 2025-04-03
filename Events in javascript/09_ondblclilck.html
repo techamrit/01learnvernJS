@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onclick in html.</title>
+    <style>
+      h2,
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <input type="button" ondblclick="ondblClick()" value="clickme !" />
+    <script>
+      function ondblClick() {
+        document.body.style.backgroundColor = "green";
+      }
+    </script> -->
+    <!-- <input type="button" id="changeColor" value="clickme !" />
+    <script>
+      document.getElementById("changeColor").ondblclick = function () {
+        document.body.style.backgroundColor = "green";
+      </script>
+      }; -->
+
+    <!-- <input type="button" id="change" value="clickme !" /> -->
+
+    <h2 id="header2" ondblclick="clickme()">Double click the text</h2>
+    <p id="p1"></p>
+    <script>
+      /* function clickme() {
+        document.getElementById("p1").innerHTML = "double click is scuessfull";
+      }*/
+      /*  document.getElementById("header2").ondblclick = function () {
+        document.getElementById("p1").innerHTML = "double click is  sucessfull";
+      };*/
+      document.getElementById("header2").addEventListener("dblclick", clickme);
+      function clickme() {
+        document.getElementById("p1").innerHTML = "double click is scuessfull";
+      }
+    </script>
+  </body>
+</html>

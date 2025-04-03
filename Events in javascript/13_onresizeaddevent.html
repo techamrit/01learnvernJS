@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onresize</title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p>this windo is resized <span id="s1"></span></p>
+    <script>
+      var s1 = 0;
+      window.addEventListener("resize", onResize);
+      function onResize() {
+        document.getElementById("p1").innerHTML =
+          "window width" +
+          window.outerWidth +
+          " " +
+          "window height " +
+          window.innerHeight;
+        s1 = s1 + 1;
+        document.getElementById("s1").innerHTML = s1;
+      }
+    </script>
+  </body>
+</html>
