@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment</title>
+  </head>
+  <body>
+    <!-- Question 4: Write a JavaScript Program that do nothing on click of a blue color 200px
+ wide div with text “Double Click Me”. But change the div color to yellow when user
+ double clicks on it -->
+
+    <!-- <input type="button" name="" id="click" value="clickme!" />
+     -->
+    <div id="d1">Double Click Me</div>
+    <script>
+      var div = document.getElementById("d1");
+      div.style.width = "200px";
+      div.style.height = "200px";
+      div.style.border = "1px";
+      div.style.backgroundColor = "blue";
+
+      document.getElementById("d1").addEventListener("dblclick", click);
+      function click() {
+        // div.style.backgroundColor = "yellow";
+        document.getElementById("d1").style.backgroundColor = "yellow";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Question 5: Write a JavaScript Program that change the color of the Rectangular div
+ when user hover on the div. Make sure to implement this using “addEventListener”
+ method of Javascript -->
+    <div id="d1">Double Click Me</div>
+    <script>
+      var div = document.getElementById("d1");
+      div.style.width = "200px";
+      div.style.height = "200px";
+      div.style.border = "1px";
+      div.style.backgroundColor = "blue";
+
+      document.getElementById("d1").addEventListener("mouseover", click);
+      document.getElementById("d1").addEventListener("mouseout", noclick);
+      function click() {
+        // div.style.backgroundColor = "yellow";
+        document.getElementById("d1").style.backgroundColor = "yellow";
+      }
+      function noclick() {
+        // div.style.backgroundColor = "yellow";
+        document.getElementById("d1").style.backgroundColor = "blue";
+      }
+    </script>
+  </body>
+</html>

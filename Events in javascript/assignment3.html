@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment</title>
+  </head>
+  <body>
+    <!-- Question 3: Write a JavaScript Program that prints the size of the everytime when the
+         user resizes the window.
+         -->
+
+    <p id="p1"></p>
+    <p>there is count of resizeing window <span id="s1"></span></p>
+    <script>
+      var s1 = 0;
+      window.addEventListener("resize", onResize);
+      function onResize() {
+        document.getElementById("p1").innerHTML =
+          "window width" +
+          window.outerWidth +
+          " " +
+          "window height " +
+          window.innerHeight;
+        s1 += 1;
+        document.getElementById("s1").innerHTML = s1;
+      }
+    </script>
+  </body>
+</html>
