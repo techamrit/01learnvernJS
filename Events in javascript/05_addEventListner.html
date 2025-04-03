@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addevent listenar</title>
+  </head>
+  <body>
+    <input type="button" value="clickme!" id="changes" />
+    <p id="line1"></p>
+    <p id="line2"></p>
+    <script>
+      document.getElementById("changes").addEventListener("click", addcolor);
+      document.getElementById("changes").addEventListener("click", updateline1);
+      document
+        .getElementById("changes")
+        .addEventListener("dblclick", updateline2);
+
+      function addcolor() {
+        document.body.style.backgroundColor = "green";
+      }
+      function updateline1() {
+        document.getElementById("line1").innerHTML =
+          "This is addevent listener";
+      }
+      function updateline2() {
+        document.getElementById("line2").innerHTML =
+          "This is addevent listener update2";
+      }
+    </script>
+  </body>
+</html>
