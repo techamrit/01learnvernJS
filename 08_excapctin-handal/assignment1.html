@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>assignment</title>
+  </head>
+  <body>
+    <!-- write a Javascript program to divide a number using 0. using throw statement
+    print on document that "Division using 0 is not possible". Make sure to
+    display a message 'exception Handled Successfully' at the end of the program
+    using finally block. -->
+    plese Enter no0 <input type="text" id="id1" /> please Entre no10
+    <input type="text" name="" id="id2" />
+    <button type="button" onclick="clickme()">validate</button>
+    <p id="res"></p>
+    <p id="res2"></p>
+    <script>
+      function clickme() {
+        var res2 = document.getElementById("res2");
+        var result = document.getElementById("res");
+        result.innerHTML = "";
+        try {
+          var val = document.getElementById("id2").value;
+          var num = document.getElementById("id1").value;
+          if (num == 0) throw "Division using 0 is not possible";
+          var ans = val / num;
+          result.innerHTML = "result : -" + ans;
+          //   document.writeln(" result" + ans);
+        } catch (e) {
+          result.innerHTML = "input is :" + e;
+        } finally {
+          res2.innerHTML =
+            " Exception Handled Successfully " +
+            "result : " +
+            val +
+            "/" +
+            num +
+            " = " +
+            ans;
+        }
+      }
+    </script>
+  </body>
+</html>
