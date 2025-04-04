@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try catch finally</title>
+  </head>
+  <body>
+    pleas enter value <input type="text" name="" id="id1" />
+    <button type="button" onclick="clickme()">Validate</button>
+    <p id="msg1"></p>
+    <p id="input1"></p>
+    <script>
+      function clickme() {
+        var c = document.getElementById("input1");
+        var msg = document.getElementById("msg1");
+        msg.innerHTML = "";
+        try {
+          var x = document.getElementById("id1").value;
+
+          if (x == "") throw "input shoud not be empty";
+          if (isNaN(x)) throw "input shoud not a string";
+          if (x < 5) throw "input should not be less than 5";
+          if (x > 10) throw "input should not be greater than 10";
+        } catch (e) {
+          msg.innerHTML = "Input is :" + e;
+        } finally {
+          c.innerHTML = "input is : " + x;
+        }
+      }
+    </script>
+  </body>
+</html>
