@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=lang, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  
+  <p>The result will be desplalyed after 3 seconds</p>
+    <p id="res"></p>
+    <script>
+let pro = new Promise(function(resolv,reject){
+    setTimeout(function(){
+        resolv("this is learn vern")
+    },3000)
+})
+
+pro.then(
+    function (value){
+        document.getElementById("res").innerHTML = value
+    }
+)
+    </script>
+  </body>
+</html>

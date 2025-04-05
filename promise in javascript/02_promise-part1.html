@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body>
+    <p>The result will be desplalyed after 3 seconds</p>
+    <p id="res"></p>
+    <script>
+      setTimeout(function () {
+        display("learnven is good for  coding");
+      }, 3000);
+
+      function display(value) {
+        document.getElementById("res").innerHTML = value;
+      }
+    </script>
+  </body>
+</html>
