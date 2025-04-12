@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  Question 3: Write a JavaScript Program to print “Invalid user” using catch mathod if
+ the user is unauthorized but if the user is authorized, return the username and userId
+ and console it. -->
+
+    <script>
+      let user = false;
+      function userId(id) {
+        return new Promise((resolve, rejects) => {
+          if (!user) {
+            throw new Error("invalid user");
+          }
+          resolve({
+            id: id,
+            UserName: "amrit",
+          });
+        });
+      }
+      try {
+        userId(2)
+          .then((user) => console.log(user.UserName))
+          .catch((error) => console.log(" caught by . catch " + error));
+      } catch (e) {
+        console.log("caught by try/catch " + e);
+      }
+    </script>
+  </body>
+</html>

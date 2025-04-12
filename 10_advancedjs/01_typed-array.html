@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- copywithin() -->
+    <!-- arr(targat,start,end) -->
+    <script>
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      arr.copyWithin(1, 2, 5);
+      document.writeln(arr);
+      document.writeln("<br>");
+      //   entries
+      var arr1 = ["html", "css", "javascritp", "react"];
+      var result = arr1.entries();
+      for (const element of result) {
+        document.writeln(element);
+      }
+      document.writeln("<br>");
+      document.writeln(result.next().value);
+      document.writeln(result.next().value);
+
+      // fill
+      var arr2 = [1, 2, 3, 4, 5, 6, 7];
+      arr2.fill(8, 7, 8);
+      document.writeln(arr2);
+      document.writeln("<br>");
+
+      //   find
+
+      var arr3 = [1, 2, 3, 4, 5, 6, 7];
+
+      var result = arr3.find(check);
+      document.writeln(result);
+      function check(value) {
+        return value > 5;
+      }
+      //   document.writeln(arr3);
+    </script>
+  </body>
+</html>

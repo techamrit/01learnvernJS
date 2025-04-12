@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      async function myFuncs() {
+        let promise = new Promise(function (reslov, reject) {
+          setTimeout(function () {
+            reslov("thsi is learn vern");
+          }, 3000);
+        });
+        document.getElementById("result").innerHTML = await promise;
+      }
+      myFuncs();
+    </script>
+  </body>
+</html>

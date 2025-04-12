@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>error excpation</title>
+  </head>
+  <body>
+    <script>
+      let user = false;
+      function UserId(id) {
+        return new Promise((resolv, reject) => {
+          if (!user) {
+            throw new Error("user is not Authorized");
+          }
+
+          resolv({
+            id: id,
+            userName: "amrit",
+          });
+        });
+      }
+      try {
+        userId(1)
+          .then((result) => {
+            console.log(result.userName);
+          })
+          .catch((err) => {
+            console.log(`caught by .catch ${err}`);
+          });
+      } catch (e) {
+        console.log(`Caught by try/catch ${e}`);
+      }
+    </script>
+  </body>
+</html>

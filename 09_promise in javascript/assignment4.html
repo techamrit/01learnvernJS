@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04_Question</title>
+  </head>
+  <body>
+    <!-- Question 4: Write a JavaScript Program using await that prints “Welcome to
+ LearnVern” after 3 seconds of interval on document. -->
+    <p id="demo"></p>
+    <script>
+      async function myfunction() {
+        let promise = new Promise(function (reasolve, reject) {
+          setTimeout(function () {
+            reasolve("welcome to LearnVern");
+          }, 2000);
+        });
+        document.getElementById("demo").innerHTML = await promise;
+      }
+
+      myfunction();
+    </script>
+    <!-- 
+    <script>
+        function delay(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+        
+        async function printMessage() {
+            await delay(3000); // 3 seconds delay
+            document.write("Welcome to LearnVern");
+        }
+        
+        printMessage();
+    </script>
+    -->
+  </body>
+</html>

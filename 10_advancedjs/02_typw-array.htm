@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // forEach
+      //   var arr1 = [2, 5, 6, 7];
+      //   var result = [];
+      //   arr1.forEach((value) => result.push(value * 2));
+      //   document.writeln(result);
+
+      // includes
+      //   var arr1 = [2, 5, 6, 7];
+      //   document.writeln(arr1.includes(2));//true
+      //   document.writeln(arr1.includes(3));//false
+
+      // /indexof
+      //   var arr1 = [2, 5, 6, 7];
+      //   document.writeln(arr1.indexOf(2));// it will retured position if true = 0
+      //   document.writeln(arr1.indexOf(3));//it wil returen if its false it will give -1
+
+      //   var arr1 = [2, 5, 6, 7];
+      //   var result = arr1.join("/");
+      //   document.writeln(result);
+
+      //   keys()
+      //   var arr1 = [2, 5, 6, 7];
+
+      //   var result = arr1.keys();
+      //   document.writeln(result.next().value);
+      //   document.writeln(result.next().value);
+      //   document.writeln(result.next().value);
+      //   document.writeln(result.next().value);
+
+      //   reduce()
+      //   var arr1 = [10, 15, 20];
+
+      //   var result = arr1.reduce((preval, currentval) => {
+      //     return preval + 5
+      //   });
+      //   document.writeln(result);
+      //   var arr1 = [10, 15, 20];
+
+      //   set()
+      //   var buffer1 = new Array(8);
+      //   var arr = new Uint8Array(buffer1);
+      //   arr.set([0, 1, 2, 3, 4, 5], 2);
+      //   document.writeln(arr);
+
+      // subarray()
+      var arr = new Uint8Array([0, 1, 2, 3, 4, 5]);
+      var copiedArray = arr.subarray();
+      document.writeln(arr.subarray() + "<br>");
+      document.writeln(arr.subarray(2) + "<br>");
+      document.writeln(arr.subarray(2, 3) + "<br>");
+    </script>
+  </body>
+</html>

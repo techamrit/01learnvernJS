@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise assignment</title>
+  </head>
+  <body>
+    <script>
+      new Promise(function (resolv, reject) {
+        setTimeout(function () {
+          resolv(1);
+        }, 2000);
+      })
+        .then(function (value) {
+          alert(value);
+          return new Promise(function (resolv, reject) {
+            setTimeout(function () {
+              resolv(value * 3);
+            }, 2000);
+          });
+        })
+        .then(function (value) {
+          alert(value);
+          return new Promise(function (resolv, reject) {
+            setTimeout(function () {
+              resolv(value * 3);
+            }, 2000);
+          });
+        })
+        .then(function (value) {
+          alert(value);
+          return new Promise(function (resolv, reject) {
+            setTimeout(function () {
+              resolv(value * 3);
+            }, 2000);
+          });
+        });
+    </script>
+  </body>
+</html>

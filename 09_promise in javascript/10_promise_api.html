@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example promise.all</title>
+  </head>
+  <body>
+    <script>
+      // Promise.all([
+      //   new Promise(function (resolv) {
+      //     setTimeout(function () {
+      //       resolv(1);
+      //     }, 2000);
+      //   }),
+      //   new Promise(function (resolv) {
+      //     setTimeout(function () {
+      //       resolv(3);
+      //     }, 3000);
+      //   }),
+      //   new Promise(function (resolv) {
+      //     setTimeout(function () {
+      //       resolv(5);
+      //     }, 5000);
+      //   }),
+      // ]).then(alert);
+      //   Promise.race([
+      //     new Promise(function (resolv) {
+      //       setTimeout(function () {
+      //         resolv(1);
+      //       }, 2000);
+      //     }),
+      //     new Promise(function (resolv) {
+      //       setTimeout(function () {
+      //         resolv(3);
+      //       }, 3000);
+      //     }),
+      //     new Promise(function (resolv) {
+      //       setTimeout(function () {
+      //         resolv(5);
+      //       }, 5000);
+      //     }),
+      //   ]).then(alert);
+      Promise.any([
+        new Promise(function (resolv) {
+          setTimeout(function () {
+            resolv(1);
+          }, 2000);
+        }),
+        new Promise(function (resolv) {
+          setTimeout(function () {
+            resolv(3);
+          }, 3000);
+        }),
+        new Promise(function (resolv) {
+          setTimeout(function () {
+            resolv(5);
+          }, 5000);
+        }),
+      ]).then(alert);
+    </script>
+  </body>
+</html>
