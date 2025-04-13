@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var s = new Set();
+      s.add("html");
+      s.add("css");
+      s.add("javascript");
+      s.add("html"); //trying to add existing value
+      document.writeln(
+        "Size of the set before clear( ) applied: " + s.size + "<br>"
+      );
+
+      for (value of s) {
+        document.writeln(value + "<br>");
+      }
+
+      s.clear();
+      document.writeln("Size of the set before clear( ) applied: " + s.size);
+    </script>
+  </body>
+</html>

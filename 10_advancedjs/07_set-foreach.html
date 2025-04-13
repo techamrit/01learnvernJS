@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var s = new Set();
+      s.add("html");
+      s.add("css");
+      s.add("javascript");
+      s.add("html"); //trying to add existing value
+
+      s.forEach((value1, value2, s) => {
+        document.writeln(value1 + " " + value2 + "<br>");
+      });
+    </script>
+  </body>
+</html>
